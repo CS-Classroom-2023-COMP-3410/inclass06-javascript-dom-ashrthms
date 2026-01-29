@@ -1,18 +1,50 @@
-/* body {
+* {
+    color: white;
+    background-color: rgb(49, 49, 49);
+}
+
+body {
     display: flex;
     width: 100%;
     justify-content: center;
-} */
+    flex-direction: column;
+}
 div {
     font-size: 250px;
     display: inline-block;
+    text-align: center;
 }
-/* #cardGrid {
+#cardGrid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 250px 250px 250px 250px;
-} */
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, max(250px,auto));
+    border: solid 2px black;
+    background-color: white;
+    border-radius: 10%;
+}
+
+#cardGrid div {
+    line-height: 250px;
+    width:fit-content;
+    height:240px;
+    margin:auto;
+    margin-top:10px;
+    margin-bottom:10px;
+    border-radius:5px;
+    background-color: black;
+}
 
 #button, #timer, #moves, #restart {
     font-size:100px; 
+}
+
+button {
+    border-radius: 10%;
+    padding: 25px;
+    background-color: rgb(22, 60, 109);
+}
+
+button:active{
+    background-color: rgb(45, 78, 122);
+    transform: scale(0.95);
 }

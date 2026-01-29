@@ -47,7 +47,7 @@ const moveDiv = document.getElementById("moves");
 moveDiv.innerText = "Moves: " + moves
 
 let timer = 0;
-let timerDiv = document.getElementById("timer");
+const timerDiv = document.getElementById("timer");
 const incTimer = setInterval(() => 
     {timer += 1;
         timerDiv.innerText = "Timer: " + timer + " seconds"
@@ -112,6 +112,7 @@ const checkMatch = function (){
 
 
 const restart = function (numPairs){
+    
     gameDeck = [];
     resetCardOptions()
     makeDeck(numPairs)
@@ -119,4 +120,11 @@ const restart = function (numPairs){
         document.querySelector('#card-'+i).innerHTML = cardBack;
         document.querySelector('#card-'+i).onclick = handleClick;
     }
+
+
+    timer=0;
+    timerDiv.innerText = "Timer: 0 seconds";
+
+    moves=0;
+    moveDiv.innerText = "Moves: 0";
 }
