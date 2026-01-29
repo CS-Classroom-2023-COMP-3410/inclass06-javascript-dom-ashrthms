@@ -2,12 +2,7 @@
 <html>
     <head>
         <script src="script.js" defer></script>
-        <style>
-            div {
-                font-size: 250px;
-                display: inline-block;
-            }
-        </style>
+        <link href="styles.css" rel="stylesheet">
     </head>
     <body>
         <div id="cardGrid">
@@ -28,5 +23,9 @@
             <div id="card-14">&#127136;</div>
             <div id="card-15">&#127136;</div>
         </div>
+        <div id="moves">Moves: 0</div><br>
+        <div id="timer">Timer: 0s</div><br>
+        <button id="restart" onClick="restart(8)">Restart</button>
+        <div id="slow" style="font-size: 200px; color:red" hidden>slow down</div>
     </body>
 </html>
