@@ -7,7 +7,7 @@ let allCards = [];
 
 const resetCardOptions = function() {
     allCards = [ 
-    , "&#127137;", "&#127138;", "&#127139;", "&#127140;", "&#127141;",
+    "&#127137;", "&#127138;", "&#127139;", "&#127140;", "&#127141;",
     "&#127142;", "&#127143;", "&#127144;", "&#127145;", "&#127146;", "&#127147;",
     "&#127148;", "&#127149;", "&#127150;", "&#127153;", "&#127154;", "&#127155;",
     "&#127156;", "&#127157;", "&#127158;", "&#127159;", "&#127160;", "&#127161;",
@@ -50,7 +50,7 @@ let timer = 0;
 const timerDiv = document.getElementById("timer");
 const incTimer = setInterval(() => 
     {timer += 1;
-        timerDiv.innerText = "Timer: " + timer + " seconds"
+        timerDiv.innerHTML = "Timer: <wbr>" + timer + " seconds"
     }
 , 1000);
 
@@ -112,7 +112,7 @@ const checkMatch = function (){
 
 
 const restart = function (numPairs){
-    
+    selected=[];
     gameDeck = [];
     resetCardOptions()
     makeDeck(numPairs)
@@ -123,7 +123,7 @@ const restart = function (numPairs){
 
 
     timer=0;
-    timerDiv.innerText = "Timer: 0 seconds";
+    timerDiv.innerHTML = "Timer: <wbr> 0 seconds";
 
     moves=0;
     moveDiv.innerText = "Moves: 0";
